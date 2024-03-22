@@ -20,7 +20,9 @@ mongoose.connect('mongodb+srv://pajithpsap:$Ajithpriya$4@cluster0.vako5wm.mongod
 
 // Use product routes
 app.use('/api', productrouter);
-
+app.get("/", (req, res) => {
+  res.send("Welcome to ECOM APIs");
+});
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
